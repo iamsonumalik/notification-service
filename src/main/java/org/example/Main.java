@@ -83,7 +83,7 @@ public class Main {
 
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>");
         System.out.println("Total Success: "+ successNotification.size());
-        for (NotificationHistory notificationHistory: listOutstanding){
+        for (NotificationHistory notificationHistory: successNotification){
             System.out.println("Type: " + notificationHistory.type + " Message: " + NotificationRepo.getNotificationById(notificationHistory.notificationId).message);
         }
     }
@@ -99,3 +99,6 @@ public class Main {
 // 8. List Outstanding notifications for this user
 // 9. Send this notification.
 // 10. List successful notifications for this user.
+
+
+
