@@ -1,11 +1,8 @@
 package org.example.services;
 
 import org.example.entity.Notification;
-import org.example.entity.NotificationHistory;
-import org.example.entity.User;
+import org.example.notifiers.NotifierFactory;
 import org.example.repository.NotificationRepo;
-
-import java.util.List;
 
 public class NotificationService {
     private final Notification notification;
@@ -20,7 +17,7 @@ public class NotificationService {
     }
 
     public void sendNotification(){
-        NotifierService.notify(notification);
+        NotifierFactory.notify(notification);
     }
 
 }

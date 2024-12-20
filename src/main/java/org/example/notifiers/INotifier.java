@@ -1,4 +1,4 @@
-package org.example.abstractions;
+package org.example.notifiers;
 
 import org.example.entity.Notification;
 

@@ -1,6 +1,5 @@
-package org.example.services;
+package org.example.notifiers;
 
-import org.example.abstractions.INotifier;
 import org.example.entity.Notification;
 import org.example.entity.NotificationHistory;
 import org.example.enums.NotificationStatus;
@@ -11,9 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class NotifierService implements INotifier {
+public class NotifierFactory implements INotifier {
 
-    static Map<NotificationType, NotifierService> notifiers = new HashMap<>();
+    static Map<NotificationType, NotifierFactory> notifiers = new HashMap<>();
     static {
         notifiers.put(NotificationType.EMAIL, new EmailNotifier());
         notifiers.put(NotificationType.SMS, new SMSNotifier());

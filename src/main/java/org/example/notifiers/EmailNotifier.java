@@ -1,8 +1,8 @@
-package org.example.services;
+package org.example.notifiers;
 
 import org.example.entity.Notification;
 
-public class EmailNotifier extends NotifierService{
+public class EmailNotifier extends NotifierFactory {
 
     @Override
     public boolean send(Notification notification)  {
